@@ -114,7 +114,8 @@
       if (tigers.some(tiger => tiger.x === player.x && tiger.y === player.y)) {
         previousPosition = { x: player.x, y: player.y };
         document.getElementById('popup').style.display = 'flex';
-        startFallingObjects(); // 미니게임 시작
+        startFallingObjects(); 
+        draw(); // 미니게임 시작
       }
     }
 
@@ -289,7 +290,6 @@ function resetGame() {
   document.getElementById("youWin").style.display = "none"; // 팝업 초기화
   document.getElementById("youLose").style.display = "none"; // 팝업 초기화
   document.getElementById("popup").style.display = "none"; // 팝업 초기화
-  draw(); // 다시 그리기 시작
   startFallingObjects(); // 아이템 다시 생성 시작
 }
 
